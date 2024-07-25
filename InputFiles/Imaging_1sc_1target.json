@@ -1,0 +1,281 @@
+
+
+[
+	{
+		"name": "simsettings",
+		"value": {
+			
+			"dt": 10,
+			"name": "CTK",
+			"run_preprocessor": true,
+			"useGMAT": true
+		}
+	},
+
+	{
+		"name": "Body",
+		"value": {
+			"atmosphere": false,
+			"body": "Earth",
+			"clouds": false,
+			"daylight": false,
+			"degMax": 0,
+			"gravity": "point_mass", 
+			"id": "Earth",
+			"ordMax": 0,
+			"ref_body": true
+		}
+	},
+
+	{
+		"name": "constellation", 
+		"value": {
+			
+			"id": "MySC", 
+			"imaging": { 
+				"avg_revtime": 1,
+				"inputs": [
+					{
+						"data_retention": 6,
+						"instrument_id": 1,
+						"instrument_type": "imager", 
+						"interf_constid": [],
+						"interference": false,
+						"link": "GS",
+						"max_range": 50000,
+						"min_clearance": 1,
+						"networkid": "MyTargets",
+						"targetting_mode": "first"
+					}
+				],
+				"max_revtime": 2,
+				"on": true,
+				"ssr_constraint": false
+			},
+			"missionsettings": {
+				"eol": "01 Jan 2024 00:00:00.000",
+				"nBodyPert": false,
+				"never": false,
+				"now": false,
+				"p_constraint": false,
+				"p_monitor": false,
+				"point_cstr": false,
+				"power_margin": 20,
+				"sc_ids": 0,
+				"simops": true,
+				"srp": false,
+				"ssr_margin": 20,
+				"t0": "01 Jan 2023 12:00:00.000",
+				"tasking": false,
+				"tof": 2
+				
+			},
+			
+		
+		
+			"orbit":{
+				"centralBody": "MyEarth",
+				"constellationType": "Walker Delta",
+				"dr": 50,
+				"initialConditions": [ 
+					{
+						"epoch": "01 Jan 2023 12:00:00.000",
+						"isSunSynchronous": false,
+						"state": {
+							"keplerian": {
+								"argumentOfPeriapsis": 0, 
+								"eccentricity": 0,
+								"inclination": 90, 
+								"meanAnomaly": 0, 
+								"rightAscension": 0, 
+								"semimajorAxisAltitude": 500, 
+								"trueAnomaly": 0 
+							},
+							"referenceFrame": "EarthMJ2000Eq"
+						}
+					}
+				],
+				"constellationProperties": {
+					"groundTrackPeriod": 1,
+					"phaseAmount": 0,
+					"planeAmount": 3,
+					"spacecraftPerPlane": 4,
+					"nSat":4
+				}
+				},
+			"spacecraft": {
+				"Cd": 2,
+				"DragArea": 0.06,
+				"DryMass": 30,
+				"SRPArea": 0.06,
+				"adcs": {
+					"active": false,
+					"actuatorChoices": [
+						3,
+						0,
+						0,
+						3,
+						0
+					],
+					"dragMomentArm": 0.05,
+					"mass": 0.91,
+					"maxDeviationFromNadir": 15,
+					"maxSlewAngle": 30,
+					"minSlewTime": 5,
+					"nadiraxis": "-X",
+					"power_min": 0.5,
+					"power_nom": 2,
+					"sensorChoices": [
+						0,
+						1,
+						0,
+						0,
+						1,
+						1
+					],
+					"slew_rate": 10,
+					"srpMomentArm": 0.05
+				},
+				"battery": {
+					"capacity": 9.62,
+					"charge_rate": 1,
+					"mass": 0.048,
+					"out_rate": 1
+				},
+				"chosenDeployables": [
+					{
+						"amount": 0,
+						"name": "Solar Array"
+					},
+					{
+						"amount": 0,
+						"name": "Antenna"
+					},
+					{
+						"amount": 0,
+						"name": "Boom"
+					}
+				],
+				"dipole": 1,
+				"eps": {
+					"mass": 0.18,
+					"power_min": 0.6,
+					"power_nom": 1
+				},
+				"instrument": {
+					"imager": [
+						{
+							"axis": "-X",
+							"bands": 50,
+							"bit_resolution": 8,
+							"fov": 10,
+							"fov_ct": 0,
+							"fovshape": "circular",
+							"internalDataStorage": 32,
+							"min_elevation_angle": 7,
+							"pldep": 0.1,
+							"pllen": 0.1,
+							"plmass": 1,
+							"plwid": 0.1,
+							"power_min": 2.5,
+							"power_nom": 3.5,
+							"resolution": 5,
+							"sampling_rate": 30,
+							"specend": 900,
+							"specstart": 400
+						}
+					],
+					
+					"imager_on": true
+				},
+			
+				"solararray": {
+					"area": 0.2,
+					"axis": "-X",
+					"efficiency": 0.295,
+					"mass": 0.85
+				},
+				"ssr": {
+					"capacity": 5,
+					"compression": 8,
+					"power_min": 0.1,
+					"power_nom": 1,
+					"processingComplexity": 1,
+					"read_rate": 580,
+					"write_rate": 615
+				},
+				"tank": {
+					"fuelDensity": 1260,
+					"fuelMass": 2,
+					"pressure": 1500,
+					"volume": 0.75
+				},
+				"thermal": {
+					"mass": 0.25,
+					"power_min": 0.1,
+					"power_nom": 1
+				},
+				"thruster": {
+					"axis": "-X",
+					"dry_mass": 1,
+					"dv_OM": 0,
+					"dv_SK": 20,
+					"isp": 350,
+					"max_burntime": 1200,
+					"power_min": 1,
+					"power_nom": 1,
+					"tech": 1,
+					"thrusterType": "CHEM_MONO",
+					"tmax": 10
+				},
+				"total_power": 20,
+			
+				"ttc": {
+					"antennas": [
+						{
+							"axis": "-X",
+							"diameter": 2.9,
+							"fov": 45,
+							"fov_ct": 0,
+							"freq": 3,
+							"gain": 30,
+							"in_mode": "gain",
+							"in_type": "parabolic",
+							"length": 10,
+							"loc": [
+								0,
+								0,
+								0
+							],
+							"min_elevation_angle": 5,
+							"power": 1
+						}
+					],
+					"receiver":{
+						"mod": "BPSK"
+					},
+					"transmitter":{
+						"mod": "BPSK"
+					}
+				}
+				
+			}
+		}
+	},
+	{
+		"name": "groundobject",
+		"value": {
+			
+			"cb_id": "Earth",
+			"discrete": false,
+            "region": [ "Custom"],
+			"id": "MyTargets",
+			"dlat":5,
+			"dlon":5,
+			"boxes":[{
+				"loni": -180, "lonf": 180, "lati": -89.99, "latf": 89.99 }
+			]
+		}
+	}
+	
+]
